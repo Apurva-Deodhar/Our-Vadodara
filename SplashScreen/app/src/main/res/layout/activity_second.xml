@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="25dp"
+    tools:context=".TaxesPaymentsActivity">
+
+    <!-- Title with improved styling -->
+
+    <!-- Rounded and styled buttons -->
+    <TextView
+        android:id="@+id/taxes_and_payments_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="sans-serif-medium"
+        android:paddingTop="35dp"
+        android:paddingBottom="35dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="5dp"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:text="TAXES AND PAYMENTS"
+        android:textColor="#000000"
+        android:textSize="33sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button1"
+        style="@style/RoundedButton"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="26dp"
+        android:text="Professional Tax"
+        android:textColor="#FFFFFF"/>
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/RoundedButton"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="26dp"
+        android:layout_gravity="center"
+        android:text="Vehicle Tax"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/button3"
+        style="@style/RoundedButton"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="26dp"
+        android:layout_gravity="center"
+        android:text="Property Tax"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/button4"
+        style="@style/RoundedButton"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="26dp"
+        android:text="Gas"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/button5"
+        style="@style/RoundedButton"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="26dp"
+        android:text="Electricity"
+        android:textColor="#FFFFFF" />
+</LinearLayout>

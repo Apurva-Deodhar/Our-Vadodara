@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "416803138651",
+    "project_id": "splashscreen-b4464",
+    "storage_bucket": "splashscreen-b4464.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:416803138651:android:e49ffd69e484ab9f28637e",
+        "android_client_info": {
+          "package_name": "com.example.splashscreen"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXR4kCcYypgaRf7zHVqiZKSY7GaWf_1tM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

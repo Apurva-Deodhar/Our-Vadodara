@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient_home"
+    tools:context=".HomePageActivity">
+
+    <!-- Top Image -->
+    <ImageView
+        android:id="@+id/top_image"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:src="@drawable/logo"
+        android:contentDescription="Top Image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="0dp"/>
+
+    <!-- "OUR VADODARA" Text -->
+    <TextView
+        android:id="@+id/our_vadodara_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OUR VADODARA"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/top_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="0dp" />
+
+    <!-- Emergency Button -->
+    <Button
+        android:id="@+id/emergency_button"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:text="EMERGENCY"
+        android:textColor="@color/red"
+        android:textSize="15sp"
+        android:backgroundTint="@color/white"
+        android:gravity="center"
+        android:drawableLeft="@drawable/emergency_icon"
+        android:drawablePadding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/our_vadodara_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp" />
+
+    <!-- Icon Buttons Layout -->
+    <LinearLayout
+        android:id="@+id/icon_buttons_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@id/emergency_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/news_icon"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/ic_news"
+            android:layout_marginRight="200dp"
+            android:background="@drawable/circular_icon_background"
+            android:contentDescription="News Events"
+            android:layout_marginEnd="8dp" />
+
+        <ImageView
+            android:id="@+id/complaints_icon"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/ic_complaints"
+            android:background="@drawable/circular_icon_background"
+            android:contentDescription="Complaints"
+            android:layout_marginEnd="8dp" />
+
+        <ImageView
+            android:id="@+id/pil_icon"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/ic_pil"
+            android:background="@drawable/circular_icon_background"
+            android:contentDescription="PIL"
+            android:layout_marginEnd="8dp" />
+
+        <ImageView
+            android:id="@+id/announcements_icon"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/ic_announcements"
+            android:background="@drawable/circular_icon_background"
+            android:contentDescription="Announcements" />
+    </LinearLayout>
+
+    <!-- Feature Cards in GridLayout -->
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/feature_cards_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:columnCount="2"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/icon_buttons_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Taxes & Payments Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/taxes_payments"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:layout_columnWeight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_tax"
+                    android:contentDescription="Taxes Payments" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Taxes Payments"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Other Cards Go Here (Complaints, City Info, Online Services) -->
+        <!-- Complaints Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/complaints"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:layout_columnWeight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:src="@drawable/ic_complaints"
+                    android:layout_width="64dp"
+                    android:layout_height="60dp"
+                    android:contentDescription="Complaints" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Complaints"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:gravity="center" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Know Your City Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/kyc"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:layout_columnWeight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:src="@drawable/ic_city"
+                    android:layout_width="64dp"
+                    android:layout_height="60dp"
+                    android:contentDescription="Know Your City" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Know Your City"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:gravity="center" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Online Services Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/online_services"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:layout_columnWeight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:src="@drawable/ic_online_services"
+                    android:layout_width="64dp"
+                    android:layout_height="60dp"
+                    android:contentDescription="Online Services" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Online Services"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:gravity="center" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <!-- Bottom Navigation Icons -->
+    <LinearLayout
+        android:id="@+id/bottom_nav_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Icons for Bottom Navigation -->
+        <ImageView
+            android:id="@+id/home_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_home"
+            android:contentDescription="Home Icon" />
+
+        <ImageView
+            android:id="@+id/profile_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_profile"
+            android:contentDescription="Profile Icon"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp" />
+
+        <ImageView
+            android:id="@+id/settings_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_settings"
+            android:contentDescription="Settings Icon"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <ImageView
+            android:id="@+id/more_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_more"
+            android:contentDescription="More" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
